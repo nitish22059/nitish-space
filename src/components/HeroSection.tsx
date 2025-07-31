@@ -3,6 +3,8 @@ import { Button } from "@/components/ui/button";
 import { ArrowDown, FileText, X, Linkedin, Github, Mail } from "lucide-react";
 import { motion } from "framer-motion";
 import TypewriterEffect from "./TypewriterEffect";
+import profileImg from "@/assets/nitishbest.png"; // Make sure profile.jpg exists in src/assets
+
 
 const HeroSection = () => {
   const scrollToProjects = () => {
@@ -34,6 +36,11 @@ const HeroSection = () => {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
         >
+          <img
+            src={profileImg}
+            alt="Nitish Profile"
+            className="mx-auto mb-4 rounded-full w-32 h-32 object-cover shadow-lg border-4 border-primary"
+          />
           <h1 className="hero-text mb-2">
             P Nitish
           </h1>

@@ -19,6 +19,7 @@ import documentImg5 from "@/assets/document5.png";
 import documentImg6 from "@/assets/document6.png";
 import documentImg7 from "@/assets/document7.png";
 import documentImg8 from "@/assets/document8.png";
+import automationImg from "@/assets/project-automation.jpg";
 import dataAnalysisImg from "@/assets/project-data-analysis.jpg";
 
 const ProjectsSection = () => {

@@ -6,11 +6,13 @@ import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Index from "./pages/Index";
 import NotFound from "./pages/NotFound";
+// import AnimatedGradientBackground from "@/components/AnimatedGradientBackground";
 
 const queryClient = new QueryClient();
 
 const App = () => (
   <QueryClientProvider client={queryClient}>
+    {/* <AnimatedGradientBackground /> */}
     <ThemeProvider defaultTheme="light" storageKey="portfolio-theme">
       <TooltipProvider>
         <Toaster />

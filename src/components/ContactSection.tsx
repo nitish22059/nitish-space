@@ -54,7 +54,7 @@ const ContactSection = () => {
           <div className="bg-card border border-border rounded-lg p-8 shadow-sm fade-in fade-in-delay-2 flex flex-col items-center">
             <a
               href="mailto:nitishnaik2022@gmail.com?subject=Contact%20from%20Portfolio"
-              className="inline-flex items-center gap-2 px-6 py-3 bg-primary text-white rounded-lg text-lg font-semibold hover:bg-primary/90 transition"
+              className="inline-flex items-center gap-2 px-6 py-3 bg-primary text-white dark:text-black rounded-lg text-lg font-semibold hover:bg-primary/90 transition"
             >
               <Mail className="h-5 w-5" />
               Email Me

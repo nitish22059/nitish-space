@@ -10,8 +10,7 @@ const AboutSection = () => {
               <span className="font-semibold text-primary">
                 Chaitanya Bharathi Institute of Technology
               </span>{" "}
-              (Hyderabad). Passionate about turning data into insights using Python, SQL, 
-              and Tableau. I contribute to open‑source and build real‑world applications 
+              (Hyderabad). Passionate about building Software Products. I contribute to open‑source and build real‑world applications 
               that solve meaningful problems.
             </p>
           </div>
