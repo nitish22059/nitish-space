@@ -5,7 +5,7 @@ const SkillsSection = () => {
   ];
 
   return (
-    <section className="py-20">
+    <section id="skills" className="py-20">
       <div className="section-container">
         <h2 className="section-title fade-in">Skills</h2>
         <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-4 max-w-4xl mx-auto">

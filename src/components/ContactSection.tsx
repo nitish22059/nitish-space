@@ -47,7 +47,7 @@ const ContactSection = () => {
   };
 
   return (
-    <section className="py-20">
+    <section id="connect" className="py-20">
       <div className="section-container">
         <h2 className="section-title fade-in">Connect with me</h2>
         <div className="max-w-2xl mx-auto">

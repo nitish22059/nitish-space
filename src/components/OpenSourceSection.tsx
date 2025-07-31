@@ -3,7 +3,7 @@ import { ExternalLink } from "lucide-react";
 
 const OpenSourceSection = () => {
   return (
-    <section className="py-20">
+    <section id="open-source" className="py-20">
       <div className="section-container">
         <h2 className="section-title fade-in">Open‑Source Contributions</h2>
         <div className="max-w-4xl mx-auto">

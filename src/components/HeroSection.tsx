@@ -8,7 +8,7 @@ const HeroSection = () => {
   };
 
   return (
-    <section className="min-h-screen flex items-center justify-center relative bg-gradient-to-br from-background to-blue-light/10">
+    <section id="hero" className="min-h-screen flex items-center justify-center relative bg-gradient-to-br from-background to-blue-light/10 pt-16">
       <div className="section-container text-center">
         <div className="fade-in">
           <h1 className="hero-text mb-6">
