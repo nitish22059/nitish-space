@@ -3,9 +3,10 @@ import { Button } from "@/components/ui/button";
 import { ArrowDown, FileText, X, Linkedin, Github, Mail } from "lucide-react";
 import { motion } from "framer-motion";
 import TypewriterEffect from "./TypewriterEffect";
-import profileImg from "@/assets/nitishbest.png"; // Make sure profile.jpg exists in src/assets
+// import profileImg from "@/assets/nitishbest.png";
+// import profileImg from "@/public/assets/nitishbest.png"; // Adjust the path as needed
 
-
+import profileImg from "../../public/assets/nitishbest.png"
 const HeroSection = () => {
   const scrollToProjects = () => {
     const projectsSection = document.getElementById('projects');

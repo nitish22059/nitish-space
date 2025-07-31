@@ -5,22 +5,22 @@ import { motion } from "framer-motion";
 import ImageGallery from "./ImageGallery";
 
 // Import project images
-import dashboardImg from "@/assets/dashboard1.png";
-import dashboardImg2 from "@/assets/dashboard2.png";
-import dashboardImg3 from "@/assets/dashboard3.png";
-import dashboardImg4 from "@/assets/dashboard4.png";
-import dashboardImg5 from "@/assets/dashboard5.png";
-import dashboardImg6 from "@/assets/dashboard6.png";
-import documentImg from "@/assets/document1.png";
-import documentImg2 from "@/assets/document2.png";
-import documentImg3 from "@/assets/document3.png";
-import documentImg4 from "@/assets/document4.png";
-import documentImg5 from "@/assets/document5.png";
-import documentImg6 from "@/assets/document6.png";
-import documentImg7 from "@/assets/document7.png";
-import documentImg8 from "@/assets/document8.png";
-import automationImg from "@/assets/project-automation.jpg";
-import dataAnalysisImg from "@/assets/project-data-analysis.jpg";
+import dashboardImg from "../../public/assets/dashboard1.png";
+import dashboardImg2 from "../../public/assets/dashboard2.png";
+import dashboardImg3 from "../../public/assets/dashboard3.png";
+import dashboardImg4 from "../../public/assets/dashboard4.png";
+import dashboardImg5 from "../../public/assets/dashboard5.png";
+import dashboardImg6 from "../../public/assets/dashboard6.png";
+import documentImg from "../../public/assets/document1.png";
+import documentImg2 from "../../public/assets/document2.png";
+import documentImg3 from "../../public/assets/document3.png";
+import documentImg4 from "../../public/assets/document4.png";
+import documentImg5 from "../../public/assets/document5.png";
+import documentImg6 from "../../public/assets/document6.png";
+import documentImg7 from "../../public/assets/document7.png";
+import documentImg8 from "../../public/assets/document8.png";
+import automationImg from "../../public/assets/project-automation.jpg";
+import dataAnalysisImg from "../../public/assets/project-data-analysis.jpg";
 
 const ProjectsSection = () => {
   const [galleryOpen, setGalleryOpen] = useState(false);
