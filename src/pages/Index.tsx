@@ -7,10 +7,14 @@ import OpenSourceSection from "@/components/OpenSourceSection";
 import EducationSection from "@/components/EducationSection";
 import ContactSection from "@/components/ContactSection";
 import FooterSection from "@/components/FooterSection";
+import ScrollProgress from "@/components/ScrollProgress";
+import ParticleBackground from "@/components/ParticleBackground";
 
 const Index = () => {
   return (
-    <div className="min-h-screen">
+    <div className="min-h-screen relative">
+      <ParticleBackground />
+      <ScrollProgress />
       <Navbar />
       <HeroSection />
       <AboutSection />

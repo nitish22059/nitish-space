@@ -4,17 +4,19 @@ import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { useToast } from "@/hooks/use-toast";
 import { Linkedin, Github, Mail, Send } from "lucide-react";
+import { motion } from "framer-motion";
 
 const ContactSection = () => {
   const [email, setEmail] = useState("");
   const [message, setMessage] = useState("");
+  const [name, setName] = useState("");
   const [isSubmitting, setIsSubmitting] = useState(false);
   const { toast } = useToast();
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     
-    if (!email || !message) {
+    if (!email || !message || !name) {
       toast({
         title: "Error",
         description: "Please fill in all fields.",
@@ -34,16 +36,41 @@ const ContactSection = () => {
 
     setIsSubmitting(true);
     
-    // Simulate form submission
-    setTimeout(() => {
-      toast({
-        title: "Message sent!",
-        description: "Thank you for reaching out. I'll get back to you soon.",
+    try {
+      // Using a popular free form service - Formspree
+      const response = await fetch('https://formspree.io/f/xwpkgwqz', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({
+          name,
+          email,
+          message,
+          _subject: `New message from ${name} - Portfolio Contact Form`,
+        }),
       });
-      setEmail("");
-      setMessage("");
+
+      if (response.ok) {
+        toast({
+          title: "Message sent!",
+          description: "Thank you for reaching out. I'll get back to you soon.",
+        });
+        setEmail("");
+        setMessage("");
+        setName("");
+      } else {
+        throw new Error("Failed to send message");
+      }
+    } catch (error) {
+      toast({
+        title: "Error",
+        description: "Failed to send message. Please try again or contact me directly on LinkedIn.",
+        variant: "destructive",
+      });
+    } finally {
       setIsSubmitting(false);
-    }, 1000);
+    }
   };
 
   return (
@@ -53,29 +80,58 @@ const ContactSection = () => {
         <div className="max-w-2xl mx-auto">
           {/* Social Links */}
           <div className="flex justify-center gap-6 mb-12 fade-in fade-in-delay-1">
-            <Button
-              variant="outline"
-              size="lg"
-              className="flex items-center gap-2"
-              onClick={() => window.open('https://linkedin.com/in/pnitish', '_blank')}
-            >
-              <Linkedin className="h-5 w-5" />
-              LinkedIn
-            </Button>
-            <Button
-              variant="outline"
-              size="lg"
-              className="flex items-center gap-2"
-              onClick={() => window.open('https://github.com/pnitish', '_blank')}
-            >
-              <Github className="h-5 w-5" />
-              GitHub
-            </Button>
+            <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
+              <Button
+                variant="outline"
+                size="lg"
+                className="flex items-center gap-2"
+                onClick={() => window.open('https://linkedin.com/in/pnitish', '_blank')}
+              >
+                <motion.div
+                  animate={{ y: [0, -2, 0] }}
+                  transition={{ duration: 2, repeat: Infinity }}
+                >
+                  <Linkedin className="h-5 w-5" />
+                </motion.div>
+                LinkedIn
+              </Button>
+            </motion.div>
+            <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
+              <Button
+                variant="outline"
+                size="lg"
+                className="flex items-center gap-2"
+                onClick={() => window.open('https://github.com/pnitish', '_blank')}
+              >
+                <motion.div
+                  animate={{ rotate: [0, 360] }}
+                  transition={{ duration: 8, repeat: Infinity, ease: "linear" }}
+                >
+                  <Github className="h-5 w-5" />
+                </motion.div>
+                GitHub
+              </Button>
+            </motion.div>
           </div>
 
           {/* Contact Form */}
           <div className="bg-card border border-border rounded-lg p-8 shadow-sm fade-in fade-in-delay-2">
             <form onSubmit={handleSubmit} className="space-y-6">
+              <div>
+                <label htmlFor="name" className="block text-sm font-medium mb-2">
+                  Your name
+                </label>
+                <Input
+                  id="name"
+                  type="text"
+                  placeholder="John Doe"
+                  value={name}
+                  onChange={(e) => setName(e.target.value)}
+                  className="w-full"
+                  required
+                />
+              </div>
+              
               <div>
                 <label htmlFor="email" className="block text-sm font-medium mb-2">
                   Your email address
