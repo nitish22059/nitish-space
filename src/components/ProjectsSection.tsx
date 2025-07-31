@@ -5,8 +5,20 @@ import { motion } from "framer-motion";
 import ImageGallery from "./ImageGallery";
 
 // Import project images
-import dashboardImg from "@/assets/project-dashboard.jpg";
-import automationImg from "@/assets/project-automation.jpg";
+import dashboardImg from "@/assets/dashboard1.png";
+import dashboardImg2 from "@/assets/dashboard2.png";
+import dashboardImg3 from "@/assets/dashboard3.png";
+import dashboardImg4 from "@/assets/dashboard4.png";
+import dashboardImg5 from "@/assets/dashboard5.png";
+import dashboardImg6 from "@/assets/dashboard6.png";
+import documentImg from "@/assets/document1.png";
+import documentImg2 from "@/assets/document2.png";
+import documentImg3 from "@/assets/document3.png";
+import documentImg4 from "@/assets/document4.png";
+import documentImg5 from "@/assets/document5.png";
+import documentImg6 from "@/assets/document6.png";
+import documentImg7 from "@/assets/document7.png";
+import documentImg8 from "@/assets/document8.png";
 import dataAnalysisImg from "@/assets/project-data-analysis.jpg";
 
 const ProjectsSection = () => {
@@ -15,26 +27,34 @@ const ProjectsSection = () => {
 
   const projects = [
     {
-      title: "React‑Flask Web Dashboard",
-      description: "Interactive web dashboard for app review sentiment analysis using React frontend + Flask backend + Tableau visuals",
-      tech: ["React", "Flask", "Python", "Tableau", "Pandas"],
+      title: "AI Document Portal",
+      description: "Enable intelligent content generation, contextual suggestions, and smart automation tool using GPT-based models, content parsing, and reusable libraries. The AI system will assist in generating content sections, recommending clauses, and improving user productivity with minimal manual input.",
+      tech: ["Next.js", "TypeScript", "OpenAI", "Supabase", "Tailwind CSS"],
       githubUrl: "#",
       liveUrl: "#",
-      images: [dashboardImg, dashboardImg, dashboardImg] // In real project, you'd have multiple different screenshots
+      images: [documentImg, documentImg2, documentImg3, documentImg4, documentImg5, documentImg6, documentImg7, documentImg8]
     },
     {
-      title: "Automation with Selenium & Arduino",
-      description: "Automated test suite & hardware integration demo showcasing web scraping and IoT connectivity",
-      tech: ["Python", "Selenium", "Arduino", "IoT"],
-      githubUrl: "#",
+      title: "React‑Flask Web Dashboard",
+      description: "Interactive web dashboard for app analysis using React frontend + Flask backend",
+      tech: ["React", "Flask", "Python", "Tableau", "Pandas"],
+      githubUrl: "https://github.com/Nitish-Naik/Dasboard-Analysis",
+      liveUrl: "#",
+      images: [dashboardImg, dashboardImg2, dashboardImg3, dashboardImg4, dashboardImg5, dashboardImg6]
+    },
+    {
+      title: "Automation with Python & Selenium",
+      description: "Automated Vedabase.io for scraping verses, translation, meaning etc.",
+      tech: ["Python", "Selenium"],
+      githubUrl: "https://github.com/Nitish-Naik/bgscrape",
       liveUrl: null,
-      images: [automationImg, automationImg]
+      images: [automationImg]
     },
     {
-      title: "Play Store Data Analysis",
-      description: "Comprehensive analysis of Play Store app data using advanced data science techniques and visualizations",
-      tech: ["Python", "Pandas", "Tableau", "Data Science"],
-      githubUrl: "#",
+      title: "Data Scraping Using Automation",
+      description: "Comprehensive Automation of Meeseva for scraping different departments",
+      tech: ["Python", "Selenium"],
+      githubUrl: "https://github.com/Nitish-Naik/meeseva",
       liveUrl: "#",
       images: [dataAnalysisImg, dataAnalysisImg, dataAnalysisImg]
     }
@@ -115,7 +135,7 @@ const ProjectsSection = () => {
                     Code
                   </Button>
                 </motion.div>
-                {project.liveUrl && (
+                { /*project.liveUrl && (
                   <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
                     <Button
                       size="sm"
@@ -131,7 +151,7 @@ const ProjectsSection = () => {
                       Demo
                     </Button>
                   </motion.div>
-                )}
+                )} */}
               </div>
             </motion.div>
           ))}

@@ -1,27 +1,27 @@
-import { GraduationCap, Award } from "lucide-react";
+import { GraduationCap, Briefcase } from "lucide-react";
 
 const EducationSection = () => {
   const education = [
     {
-      institution: "Chaitanya Bharathi Institute of Technology, Hyderabad",
-      degree: "B.E. Student",
-      description: "Relevant coursework in Data Science & ML",
-      icon: GraduationCap,
-      period: "2021 - 2025"
+      institution: "Blackcoffer",
+      degree: "Associate Software Engineer",
+      description: "Worked on many different projecs",
+      icon: Briefcase,
+      period: "May 2025 - Present"
     },
     {
-      institution: "AlmaX/AlmaBetter Data Science Program",
-      degree: "Data Science Certification",
-      description: "Built Tableau dashboard analyzing Play Store review data",
-      icon: Award,
-      period: "2024"
+      institution: "Chaitanya Bharathi Institute of Technology, Hyderabad",
+      degree: "B.E. Student",
+      description: "Computer Science Engineering",
+      icon: GraduationCap,
+      period: "2022 - 2026"
     }
   ];
 
   return (
     <section id="education" className="py-20 bg-muted/30">
       <div className="section-container">
-        <h2 className="section-title fade-in">Education & Experience</h2>
+        <h2 className="section-title fade-in">Experience & Education</h2>
         <div className="max-w-4xl mx-auto">
           <div className="grid md:grid-cols-2 gap-6">
             {education.map((item, index) => {
