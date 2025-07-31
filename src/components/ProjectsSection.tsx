@@ -34,7 +34,7 @@ const ProjectsSection = () => {
           {projects.map((project, index) => (
             <div
               key={project.title}
-              className={`project-card fade-in fade-in-delay-${index + 1}`}
+              className={`project-card group fade-in fade-in-delay-${index + 1}`}
             >
               <h3 className="text-xl font-semibold mb-3 group-hover:text-primary transition-colors">
                 {project.title}

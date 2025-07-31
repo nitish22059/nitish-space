@@ -162,7 +162,7 @@
 
   .project-card {
     @apply bg-card border border-border rounded-lg p-6 hover:shadow-lg 
-           transition-all duration-300 group cursor-pointer;
+           transition-all duration-300 cursor-pointer;
   }
 
   .fade-in {
