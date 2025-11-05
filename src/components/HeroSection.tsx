@@ -121,7 +121,9 @@ const HeroSection = () => {
                       </div>
                     )}
                     <iframe
-                      src="https://drive.google.com/file/d/1T4bGWUAiWyS8kwFLvdqrI_UFi2c3L7Fp/preview"
+                    
+                      // src="https://drive.google.com/file/d/1T4bGWUAiWyS8kwFLvdqrI_UFi2c3L7Fp/preview"
+                      src="https://www.overleaf.com/read/dhynrzgmdkbv#e786eb"
                       title="Resume"
                       className="w-full h-[70vh] rounded border shadow-inner bg-gray-50 dark:bg-gray-800"
                       allowFullScreen
