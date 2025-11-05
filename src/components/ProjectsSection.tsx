@@ -26,7 +26,7 @@ import dataAnalysisImg from "../../public/assets/project-data-analysis.jpg";
 
 import instant0 from "../../public/assets/instant0.png";
 import instant00 from "../../public/assets/instant00.png";
-import instant1 from "../../public/assets/instant1.png";
+import instant1 from "../../public/assets/instantDev1.png";
 import instant2 from "../../public/assets/instant2.png";
 import instant3 from "../../public/assets/instant3.png";
 import instant4 from "../../public/assets/instant4.png";
