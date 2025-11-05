@@ -28,7 +28,8 @@ const SkillsSection = () => {
     "Git",
     "Docker",
     "AWS",
-    "GCP"
+    "GCP",
+    "Shell Scripting",
   ];
 
   return (

@@ -22,6 +22,20 @@ import documentImg8 from "../../public/assets/document8.png";
 import automationImg from "../../public/assets/project-automation.jpg";
 import dataAnalysisImg from "../../public/assets/project-data-analysis.jpg";
 
+
+
+import instant0 from "../../public/assets/instant0.png";
+import instant00 from "../../public/assets/instant00.png";
+import instant1 from "../../public/assets/instant1.png";
+import instant2 from "../../public/assets/instant2.png";
+import instant3 from "../../public/assets/instant3.png";
+import instant4 from "../../public/assets/instant4.png";
+import instant5 from "../../public/assets/instant5.png";
+import instant6 from "../../public/assets/instant6.png";
+import instant7 from "../../public/assets/instant7.png";
+import instant8 from "../../public/assets/instant8.png";
+
+
 const ProjectsSection = () => {
   const [galleryOpen, setGalleryOpen] = useState(false);
   const [currentImages, setCurrentImages] = useState<string[]>([]);
@@ -58,7 +72,15 @@ const ProjectsSection = () => {
       githubUrl: "https://github.com/Nitish-Naik/meeseva",
       liveUrl: "#",
       images: [dataAnalysisImg, dataAnalysisImg, dataAnalysisImg]
-    }
+    },
+    {
+      title: "Instant Dev Logs",
+      description: "Transform Your Application Logs Into Actionable Insights",
+      tech: ["Next.js", "Typescript", "Convex", "Tailwind"],
+      githubUrl: "https://github.com/nitish22059/nitish-space",
+      liveUrl: "https://instantdevlogs.netlify.app/",
+      images: [instant0, instant0, instant1, instant2, instant3, instant4, instant5, instant6, instant7, instant8],
+    },
   ];
 
   const openGallery = (images: string[]) => {
