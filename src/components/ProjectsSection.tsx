@@ -158,7 +158,7 @@ const ProjectsSection = () => {
                     Code
                   </Button>
                 </motion.div>
-                { /*project.liveUrl && (
+                {project.liveUrl && (
                   <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
                     <Button
                       size="sm"
@@ -174,7 +174,7 @@ const ProjectsSection = () => {
                       Demo
                     </Button>
                   </motion.div>
-                )} */}
+                )} 
               </div>
             </motion.div>
           ))}
