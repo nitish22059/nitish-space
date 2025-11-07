@@ -7,7 +7,7 @@ const EducationSection = () => {
       degree: "Associate Software Engineer",
       description: "Worked on many different projecs",
       icon: Briefcase,
-      period: "May 2025 - Present"
+      period: "May 2025 - Nov 2025"
     },
     {
       institution: "Chaitanya Bharathi Institute of Technology, Hyderabad",
