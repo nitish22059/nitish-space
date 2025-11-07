@@ -54,7 +54,7 @@ const ProjectsSection = () => {
       description: "Interactive web dashboard for app analysis using React frontend + Flask backend",
       tech: ["React", "Flask", "Python", "Tableau", "Pandas"],
       githubUrl: "https://github.com/Nitish-Naik/Dasboard-Analysis",
-      liveUrl: "#",
+      liveUrl: "null",
       images: [dashboardImg, dashboardImg2, dashboardImg3, dashboardImg4, dashboardImg5, dashboardImg6]
     },
     {
@@ -70,7 +70,7 @@ const ProjectsSection = () => {
       description: "Comprehensive Automation of Meeseva for scraping different departments",
       tech: ["Python", "Selenium"],
       githubUrl: "https://github.com/Nitish-Naik/meeseva",
-      liveUrl: "#",
+      liveUrl: null,
       images: [dataAnalysisImg, dataAnalysisImg, dataAnalysisImg]
     },
     {
