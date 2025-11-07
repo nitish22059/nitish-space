@@ -46,7 +46,7 @@ const ProjectsSection = () => {
       description: "Enable intelligent content generation, contextual suggestions, and smart automation tool using GPT-based models, content parsing, and reusable libraries. The AI system will assist in generating content sections, recommending clauses, and improving user productivity with minimal manual input.",
       tech: ["Next.js", "TypeScript", "OpenAI", "Supabase", "Tailwind CSS"],
       githubUrl: "#",
-      liveUrl: "#",
+      liveUrl: "http://15.223.242.19:3000/",
       images: [documentImg, documentImg2, documentImg3, documentImg4, documentImg5, documentImg6, documentImg7, documentImg8]
     },
     {
