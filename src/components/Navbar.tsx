@@ -9,10 +9,10 @@ const Navbar = () => {
   const [activeSection, setActiveSection] = useState("hero");
 
   const navItems = [
-    { name: "Skills", href: "skills" },
     { name: "Projects", href: "projects" },
-    { name: "Open-Source", href: "open-source" },
-    { name: "Education", href: "education" },
+    { name: "Experience", href: "experience" },
+    { name: "Skills", href: "skills" },
+    { name: "Open Source", href: "open-source" },
     { name: "Connect", href: "connect" }
   ];
 
@@ -31,7 +31,7 @@ const Navbar = () => {
 
   useEffect(() => {
     const handleScroll = () => {
-      const sections = ["hero", "skills", "projects", "open-source", "education", "connect"];
+      const sections = ["hero", "projects", "experience", "skills", "open-source", "connect"];
       const scrollY = window.scrollY;
 
       for (const section of sections) {

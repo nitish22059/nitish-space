@@ -2,35 +2,45 @@ import { Button } from "@/components/ui/button";
 import { ExternalLink } from "lucide-react";
 
 const OpenSourceSection = () => {
+  const contributions = [
+    {
+      title: "OWASP-BLT",
+      text: "Backend enhancements and secure-coding contributions to OWASP's open-source security platform.",
+      url: "https://github.com/OWASP-BLT/BLT",
+    },
+    {
+      title: "Unsiloed-AI",
+      text: "AI data workflow and backend tooling contributions for collaborative model development.",
+      url: "https://github.com/Unsiloed-ai/unsiloed",
+    },
+  ];
+
   return (
-    <section id="open-source" className="py-20 bg-gradient-to-br from-blue-50 via-purple-50 to-pink-50 dark:from-gray-900 dark:via-gray-950 dark:to-gray-900">
+    <section id="open-source" className="py-20">
       <div className="section-container">
-        <h2 className="section-title fade-in text-3xl font-bold text-center mb-10 tracking-tight text-primary drop-shadow-lg">Open-Source Contributions</h2>
-        <div className="max-w-4xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-8">
-          <div className="bg-white/90 dark:bg-card border border-blue-200 dark:border-blue-800 rounded-2xl p-8 shadow-lg flex flex-col items-center fade-in fade-in-delay-1">
-            <span className="text-2xl font-bold text-blue-700 dark:text-blue-400 mb-2">OWASP-BLT</span>
-            <p className="text-center text-gray-700 dark:text-gray-200 mb-4">Backend enhancements and secure-coding contributions to OWASP's open-source security platform.</p>
-            <Button
-              variant="outline"
-              className="flex items-center gap-2 mt-auto"
-              onClick={() => window.open('https://github.com/OWASP-BLT/BLT', '_blank')}
-            >
-              <ExternalLink className="h-4 w-4" />
-              View Project
-            </Button>
-          </div>
-          <div className="bg-white/90 dark:bg-card border border-green-200 dark:border-green-800 rounded-2xl p-8 shadow-lg flex flex-col items-center fade-in fade-in-delay-2">
-            <span className="text-2xl font-bold text-green-700 dark:text-green-400 mb-2">Unsiloed-AI</span>
-            <p className="text-center text-gray-700 dark:text-gray-200 mb-4">AI data workflow and backend tooling contributions for collaborative model development.</p>
-            <Button
-              variant="outline"
-              className="flex items-center gap-2 mt-auto"
-              onClick={() => window.open('https://github.com/Unsiloed-ai/unsiloed', '_blank')}
-            >
-              <ExternalLink className="h-4 w-4" />
-              View Project
-            </Button>
-          </div>
+        <div className="max-w-3xl mb-8">
+          <p className="text-sm font-semibold uppercase tracking-wide text-primary mb-2">Open Source</p>
+          <h2 className="text-3xl font-semibold mb-3">Contributions beyond personal projects</h2>
+          <p className="text-muted-foreground">
+            I like working in real codebases where maintainability, secure defaults, and collaboration matter.
+          </p>
+        </div>
+        <div className="grid md:grid-cols-2 gap-5">
+          {contributions.map((item) => (
+            <article key={item.title} className="bg-card border border-border rounded-lg p-5 shadow-sm">
+              <h3 className="text-xl font-semibold mb-2">{item.title}</h3>
+              <p className="text-muted-foreground leading-relaxed mb-5">{item.text}</p>
+              <Button
+                variant="outline"
+                size="sm"
+                className="flex items-center gap-2"
+                onClick={() => window.open(item.url, "_blank")}
+              >
+                <ExternalLink className="h-4 w-4" />
+                View Project
+              </Button>
+            </article>
+          ))}
         </div>
       </div>
     </section>

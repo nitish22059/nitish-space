@@ -26,7 +26,7 @@ const EducationSection = () => {
   ];
 
   return (
-    <section id="education" className="py-20 bg-muted/30">
+    <section id="experience" className="py-20">
       <div className="section-container">
         <h2 className="section-title fade-in">Experience & Education</h2>
         <div className="max-w-4xl mx-auto">

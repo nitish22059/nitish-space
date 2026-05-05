@@ -8,20 +8,18 @@ import EducationSection from "@/components/EducationSection";
 import ContactSection from "@/components/ContactSection";
 import FooterSection from "@/components/FooterSection";
 import ScrollProgress from "@/components/ScrollProgress";
-import ParticleBackground from "@/components/ParticleBackground";
 
 const Index = () => {
   return (
     <div className="min-h-screen relative">
-      <ParticleBackground />
       <ScrollProgress />
       <Navbar />
       <HeroSection />
-      <AboutSection />
-      <SkillsSection />
       <ProjectsSection />
-      <OpenSourceSection />
+      <AboutSection />
       <EducationSection />
+      <SkillsSection />
+      <OpenSourceSection />
       <ContactSection />
       <FooterSection />
     </div>
