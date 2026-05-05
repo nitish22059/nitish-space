@@ -18,7 +18,7 @@ const HeroSection = () => {
 
   const closeResume = () => setShowResume(false);
 
-  const coreStack = ["Python", "PostgreSQL", "Redis Streams", "Linux", "Git", "TypeScript"];
+  const coreStack = ["Python", "Java", "PostgreSQL", "Redis Streams", "Linux", "Git", "TypeScript"];
 
   return (
     <section id="hero" className="min-h-[92vh] flex items-center bg-background pt-16">

@@ -37,7 +37,7 @@ const ContactSection = () => {
                 onClick={() => window.open('https://github.com/Nitish-Naik', '_blank')}
               >
                 <motion.div
-                  animate={{ rotate: [0, 360] }}
+                  // animate={{ rotate: [0, 360] }}
                   transition={{ duration: 8, repeat: Infinity, ease: "linear" }}
                 >
                   <Github className="h-5 w-5" />
