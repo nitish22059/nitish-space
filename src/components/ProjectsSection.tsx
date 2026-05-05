@@ -25,16 +25,19 @@ const ProjectsSection = () => {
       title: "FlowMind AI",
       description: "AI workflow orchestration engine for composing multi-step LLM pipelines from natural-language intent to structured execution.",
       tech: ["Next.js", "Tailwind", "FastAPI", "Redis", "OpenAI"],
+      githubUrl: undefined,
     },
     {
       title: "LogIQ",
       description: "Distributed logging and AI debugging platform for high-throughput ingestion, search, and root-cause analysis.",
       tech: ["Next.js", "Node.js", "Redis Streams", "PostgreSQL", "OpenAI"],
+      githubUrl: "https://github.com/Nitish-Naik/LogIQ",
     },
     {
       title: "CalmPilot",
       description: "Real-time user platform with authentication, subscriptions, and low-latency WebSocket-driven UI updates.",
       tech: ["Next.js", "React", "TypeScript", "Node.js", "WebSockets"],
+      githubUrl: "https://github.com/Nitish-Naik/aariv/",
     },
   ];
 
@@ -102,6 +105,17 @@ const ProjectsSection = () => {
                   </span>
                 ))}
               </div>
+              {project.githubUrl && (
+                <Button
+                  variant="outline"
+                  size="sm"
+                  className="mt-5 flex items-center gap-2"
+                  onClick={() => window.open(project.githubUrl, "_blank")}
+                >
+                  <Github className="h-4 w-4" />
+                  View Code
+                </Button>
+              )}
             </article>
           ))}
         </div>
