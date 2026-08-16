@@ -1,46 +1,41 @@
-import { Linkedin, Github, Mail, Sparkles } from "lucide-react";
+import { Linkedin, Github, Mail } from "lucide-react";
 
 const FooterSection = () => {
   return (
-    <footer className="bg-slate-950 text-slate-400 py-12 border-t border-slate-800">
+    <footer className="bg-white dark:bg-slate-950 text-slate-600 dark:text-slate-400 py-10 border-t border-slate-200 dark:border-slate-800">
       <div className="section-container">
-        <div className="flex flex-col md:flex-row items-center justify-between gap-6 pb-8 border-b border-slate-800 text-center md:text-left">
-          {/* Logo & Tagline */}
-          <div className="space-y-1">
-            <a href="#hero" className="flex items-center gap-2 justify-center md:justify-start">
-              <div className="h-7 w-7 rounded-lg bg-white text-slate-900 font-extrabold flex items-center justify-center text-sm">
-                N
-              </div>
-              <span className="font-bold text-white text-lg tracking-tight">Nitish Naik</span>
+        <div className="flex flex-col sm:flex-row items-center justify-between gap-6 pb-6 border-b border-slate-100 dark:border-slate-800">
+          <div className="text-center sm:text-left space-y-1">
+            <a href="#hero" className="font-bold text-slate-900 dark:text-white text-lg tracking-tight hover:text-slate-700">
+              Nitish Naik
             </a>
-            <p className="text-xs text-slate-500">
-              Full-Stack Web Developer (Next.js) & AI Systems Engineer • Custom Built for Elvoro Ltd
+            <p className="text-xs text-[#64748B] dark:text-slate-400">
+              Full-Stack Web Developer & AI Systems Engineer
             </p>
           </div>
 
-          {/* Social Links */}
-          <div className="flex items-center gap-4">
-            <a
-              href="https://linkedin.com/in/nitish-naik1"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="p-2 rounded-lg bg-slate-900 hover:bg-slate-800 text-slate-400 hover:text-white transition-colors"
-              aria-label="LinkedIn"
-            >
-              <Linkedin className="h-5 w-5" />
-            </a>
+          <div className="flex items-center gap-5">
             <a
               href="https://github.com/Nitish-Naik"
               target="_blank"
               rel="noopener noreferrer"
-              className="p-2 rounded-lg bg-slate-900 hover:bg-slate-800 text-slate-400 hover:text-white transition-colors"
+              className="text-slate-600 hover:text-slate-900 dark:text-slate-400 dark:hover:text-white transition-colors"
               aria-label="GitHub"
             >
               <Github className="h-5 w-5" />
             </a>
             <a
+              href="https://linkedin.com/in/nitish-naik1"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-slate-600 hover:text-slate-900 dark:text-slate-400 dark:hover:text-white transition-colors"
+              aria-label="LinkedIn"
+            >
+              <Linkedin className="h-5 w-5" />
+            </a>
+            <a
               href="mailto:nitishnaik2022@gmail.com"
-              className="p-2 rounded-lg bg-slate-900 hover:bg-slate-800 text-slate-400 hover:text-white transition-colors"
+              className="text-slate-600 hover:text-slate-900 dark:text-slate-400 dark:hover:text-white transition-colors"
               aria-label="Email"
             >
               <Mail className="h-5 w-5" />
@@ -48,13 +43,9 @@ const FooterSection = () => {
           </div>
         </div>
 
-        {/* Bottom copyright & status */}
-        <div className="pt-6 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-slate-500">
+        <div className="pt-6 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-[#64748B]">
           <p>© 2026 Nitish Naik. All rights reserved.</p>
-          <div className="flex items-center gap-2">
-            <span className="h-2 w-2 rounded-full bg-emerald-500 animate-pulse" />
-            <span>Available for Elvoro Ltd & Remote Engineering</span>
-          </div>
+          <p>Built with Next.js, React & Tailwind CSS</p>
         </div>
       </div>
     </footer>

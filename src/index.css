@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Inter:wght@300;400;500;600;700&family=Fira+Code:wght@400;500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap');
 
 @tailwind base;
 @tailwind components;
@@ -7,51 +7,49 @@
 @layer base {
   :root {
     --background: 0 0% 100%;
-    --foreground: 224 71.4% 4.1%;
+    --foreground: 222.2 84% 4.9%;
 
     --card: 0 0% 100%;
-    --card-foreground: 224 71.4% 4.1%;
+    --card-foreground: 222.2 84% 4.9%;
 
     --popover: 0 0% 100%;
-    --popover-foreground: 224 71.4% 4.1%;
+    --popover-foreground: 222.2 84% 4.9%;
 
-    --primary: 221.2 83.2% 53.3%;
+    --primary: 222.2 47.4% 11.2%;
     --primary-foreground: 210 40% 98%;
 
-    --secondary: 220 14.3% 95.9%;
-    --secondary-foreground: 220.9 39.3% 11%;
+    --secondary: 210 40% 96.1%;
+    --secondary-foreground: 222.2 47.4% 11.2%;
 
-    --muted: 220 14.3% 95.9%;
-    --muted-foreground: 220 8.9% 46.1%;
+    --muted: 210 40% 96.1%;
+    --muted-foreground: 215.4 16.3% 46.9%;
 
-    --accent: 220 14.3% 95.9%;
-    --accent-foreground: 220.9 39.3% 11%;
+    --accent: 210 40% 96.1%;
+    --accent-foreground: 222.2 47.4% 11.2%;
 
     --destructive: 0 84.2% 60.2%;
     --destructive-foreground: 210 40% 98%;
 
-    --border: 220 13% 91%;
-    --input: 220 13% 91%;
-    --ring: 224 71.4% 4.1%;
+    --border: 214.3 31.8% 91.4%;
+    --input: 214.3 31.8% 91.4%;
+    --ring: 222.2 84% 4.9%;
 
     --radius: 0.75rem;
 
-    --font-heading: 'Plus Jakarta Sans', sans-serif;
-    --font-sans: 'Inter', sans-serif;
-    --font-mono: 'Fira Code', monospace;
+    --font-sans: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
   }
 
   .dark {
-    --background: 224 71.4% 4.1%;
+    --background: 222.2 84% 4.9%;
     --foreground: 210 40% 98%;
 
-    --card: 224 71.4% 4.1%;
+    --card: 222.2 84% 4.9%;
     --card-foreground: 210 40% 98%;
 
-    --popover: 224 71.4% 4.1%;
+    --popover: 222.2 84% 4.9%;
     --popover-foreground: 210 40% 98%;
 
-    --primary: 217.2 91.2% 59.8%;
+    --primary: 210 40% 98%;
     --primary-foreground: 222.2 47.4% 11.2%;
 
     --secondary: 217.2 32.6% 17.5%;
@@ -82,13 +80,12 @@
   }
 
   body {
-    @apply bg-background text-foreground font-sans antialiased selection:bg-primary/20 selection:text-primary;
+    @apply bg-background text-slate-900 font-sans antialiased selection:bg-slate-200 selection:text-slate-900;
     font-family: var(--font-sans);
   }
 
   h1, h2, h3, h4, h5, h6 {
-    font-family: var(--font-heading);
-    @apply tracking-tight font-bold text-slate-900 dark:text-slate-100;
+    @apply tracking-tight font-bold text-slate-900 dark:text-white;
   }
 }
 
@@ -97,49 +94,24 @@
     @apply max-w-6xl mx-auto px-4 sm:px-6 lg:px-8;
   }
 
+  /* Exact Figma Card Styles */
   .figma-card {
-    @apply bg-card border border-border/80 rounded-2xl p-6 sm:p-8 shadow-sm hover:shadow-md transition-all duration-300;
+    @apply bg-white dark:bg-slate-900 border border-slate-200/90 dark:border-slate-800 rounded-2xl p-6 sm:p-8 shadow-sm hover:shadow-md transition-all duration-300;
   }
 
-  .figma-badge {
-    @apply px-3 py-1 text-xs font-medium bg-slate-100 text-slate-700 dark:bg-slate-800 dark:text-slate-300 rounded-lg border border-slate-200/80 dark:border-slate-700/60 inline-flex items-center gap-1.5;
+  .figma-skill-chip {
+    @apply px-3.5 py-1.5 text-sm font-medium bg-slate-100/80 text-slate-700 dark:bg-slate-800 dark:text-slate-300 rounded-md border border-slate-200/60 dark:border-slate-700/60 inline-flex items-center gap-1.5;
   }
 
-  .figma-btn-primary {
-    @apply bg-slate-900 hover:bg-slate-800 text-white dark:bg-white dark:text-slate-900 dark:hover:bg-slate-100 font-medium px-6 py-3 rounded-full transition-all duration-200 shadow-sm hover:shadow active:scale-[0.98] inline-flex items-center justify-center gap-2 text-sm;
+  .figma-btn-dark {
+    @apply bg-[#0F172A] hover:bg-[#1E293B] text-white font-medium px-6 py-2.5 rounded-lg transition-all duration-200 shadow-sm active:scale-[0.98] inline-flex items-center justify-center gap-2 text-sm;
   }
 
-  .figma-btn-secondary {
-    @apply bg-transparent hover:bg-slate-100 text-slate-800 dark:text-slate-200 dark:hover:bg-slate-800 border border-slate-300 dark:border-slate-700 font-medium px-6 py-3 rounded-full transition-all duration-200 inline-flex items-center justify-center gap-2 text-sm;
+  .figma-btn-pill {
+    @apply bg-[#0F172A] hover:bg-[#1E293B] text-white font-medium px-6 py-2 rounded-full transition-all duration-200 shadow-sm active:scale-[0.98] inline-flex items-center justify-center gap-2 text-sm;
   }
 
-  .figma-btn-elvoro {
-    @apply bg-gradient-to-r from-blue-600 via-indigo-600 to-violet-600 hover:from-blue-700 hover:to-violet-700 text-white font-semibold px-6 py-3 rounded-full transition-all duration-200 shadow-md hover:shadow-lg active:scale-[0.98] inline-flex items-center justify-center gap-2 text-sm;
+  .figma-btn-outline {
+    @apply bg-white hover:bg-slate-50 text-slate-900 border border-slate-200 font-medium px-6 py-2.5 rounded-lg transition-all duration-200 inline-flex items-center justify-center gap-2 text-sm;
   }
-}
-
-/* Glassmorphism & Custom Accents */
-.glass-panel {
-  background: rgba(255, 255, 255, 0.7);
-  backdrop-filter: blur(12px);
-  -webkit-backdrop-filter: blur(12px);
-  border: 1px solid rgba(229, 231, 235, 0.8);
-}
-
-.dark .glass-panel {
-  background: rgba(15, 23, 42, 0.7);
-  border: 1px solid rgba(51, 65, 85, 0.8);
-}
-
-.gradient-text {
-  @apply bg-clip-text text-transparent bg-gradient-to-r from-blue-600 via-indigo-600 to-violet-600 dark:from-blue-400 dark:via-indigo-400 dark:to-violet-400;
-}
-
-@keyframes pulseGlow {
-  0%, 100% { opacity: 0.4; transform: scale(1); }
-  50% { opacity: 0.8; transform: scale(1.05); }
-}
-
-.animate-pulse-glow {
-  animation: pulseGlow 4s ease-in-out infinite;
 }
