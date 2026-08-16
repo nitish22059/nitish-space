@@ -1,16 +1,16 @@
-import { Linkedin, Github, Mail } from "lucide-react";
+import { Github, Linkedin, Twitter, Mail } from "lucide-react";
 
 const FooterSection = () => {
   return (
-    <footer className="bg-white dark:bg-slate-950 text-slate-600 dark:text-slate-400 py-10 border-t border-slate-200 dark:border-slate-800">
-      <div className="section-container">
-        <div className="flex flex-col sm:flex-row items-center justify-between gap-6 pb-6 border-b border-slate-100 dark:border-slate-800">
+    <footer className="bg-white text-[#64748B] py-12 border-t border-slate-200">
+      <div className="section-container space-y-8">
+        <div className="flex flex-col sm:flex-row items-center justify-between gap-6 pb-6 border-b border-slate-200/80">
           <div className="text-center sm:text-left space-y-1">
-            <a href="#hero" className="font-bold text-slate-900 dark:text-white text-lg tracking-tight hover:text-slate-700">
+            <a href="#hero" className="font-bold text-[#0F172A] text-lg tracking-tight hover:text-slate-700">
               Nitish Naik
             </a>
-            <p className="text-xs text-[#64748B] dark:text-slate-400">
-              Full-Stack Web Developer & AI Systems Engineer
+            <p className="text-xs text-[#64748B]">
+              Building the future, one line of code at a time.
             </p>
           </div>
 
@@ -19,33 +19,41 @@ const FooterSection = () => {
               href="https://github.com/Nitish-Naik"
               target="_blank"
               rel="noopener noreferrer"
-              className="text-slate-600 hover:text-slate-900 dark:text-slate-400 dark:hover:text-white transition-colors"
+              className="text-slate-600 hover:text-[#0F172A] transition-colors"
               aria-label="GitHub"
             >
-              <Github className="h-5 w-5" />
+              <Github className="h-4 w-4" />
             </a>
             <a
               href="https://linkedin.com/in/nitish-naik1"
               target="_blank"
               rel="noopener noreferrer"
-              className="text-slate-600 hover:text-slate-900 dark:text-slate-400 dark:hover:text-white transition-colors"
+              className="text-slate-600 hover:text-[#0F172A] transition-colors"
               aria-label="LinkedIn"
             >
-              <Linkedin className="h-5 w-5" />
+              <Linkedin className="h-4 w-4" />
+            </a>
+            <a
+              href="https://twitter.com"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-slate-600 hover:text-[#0F172A] transition-colors"
+              aria-label="Twitter"
+            >
+              <Twitter className="h-4 w-4" />
             </a>
             <a
               href="mailto:nitishnaik2022@gmail.com"
-              className="text-slate-600 hover:text-slate-900 dark:text-slate-400 dark:hover:text-white transition-colors"
+              className="text-slate-600 hover:text-[#0F172A] transition-colors"
               aria-label="Email"
             >
-              <Mail className="h-5 w-5" />
+              <Mail className="h-4 w-4" />
             </a>
           </div>
         </div>
 
-        <div className="pt-6 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-[#64748B]">
-          <p>© 2026 Nitish Naik. All rights reserved.</p>
-          <p>Built with Next.js, React & Tailwind CSS</p>
+        <div className="text-center text-xs text-[#64748B]">
+          © 2026 Nitish Naik. All rights reserved.
         </div>
       </div>
     </footer>

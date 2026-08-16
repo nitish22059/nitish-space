@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { Calendar, MapPin, CheckCircle2, Building2 } from "lucide-react";
+import { Calendar, MapPin } from "lucide-react";
 
 const ExperienceSection = () => {
   const experiences = [
@@ -7,110 +7,104 @@ const ExperienceSection = () => {
       company: "Infosys",
       role: "Digital Specialist Engineer L1",
       period: "August 2025 – Present",
-      location: "Bengaluru, Karnataka, India",
-      points: [
-        "Built end-to-end features for a large-scale e-commerce platform using Next.js, React, TypeScript, and Node.js across 12 international markets.",
-        "Developed Node.js/Express microservices with PostgreSQL, MongoDB, and Redis, implementing JWT, RBAC, and OAuth2 for multi-tenant security.",
-        "Improved frontend performance using SSR, SSG, code splitting, caching, and CDN optimization, while engineering reusable React components.",
-        "Established automated testing with Playwright, Jest, and React Testing Library; contributed to zero-downtime Node.js 16–22 migration.",
-      ],
-      tech: ["Next.js", "React", "TypeScript", "Node.js", "PostgreSQL", "MongoDB", "Redis", "Playwright"],
+      location: "Bengaluru, India",
+      align: "left",
+      description:
+        "Built end-to-end features for a large-scale e-commerce platform using Next.js, React, TypeScript, and Node.js across 12 international markets. Developed microservices with PostgreSQL, MongoDB, Redis, JWT, RBAC & OAuth2.",
+      tech: ["Next.js", "React", "TypeScript", "Node.js", "PostgreSQL"],
     },
     {
       company: "Parsewave LLC",
       role: "Backend Engineer",
       period: "November 2025 – May 2026",
       location: "Remote",
-      points: [
-        "Built end-to-end Python/Pandas data pipelines for generating LLM training and fine-tuning datasets, covering ingestion, cleaning, validation, and export.",
-        "Automated deduplication, schema validation, quality filtering, and annotation preparation across large structured datasets.",
-      ],
-      tech: ["Python", "Pandas", "LLM Datasets", "Data Pipelines", "Schema Validation"],
+      align: "right",
+      description:
+        "Built end-to-end Python/Pandas data pipelines for generating LLM training and fine-tuning datasets, covering ingestion, cleaning, validation, deduplication, and export.",
+      tech: ["Python", "Pandas", "LLM Datasets", "Data Pipelines"],
     },
     {
       company: "Blackcoffer",
       role: "Associate Software Engineer",
       period: "May 2025 – November 2025",
-      location: "Remote, Part-Time",
-      points: [
-        "Developed an AI-powered document analysis platform end-to-end using Next.js, FastAPI, Python, and Supabase.",
-        "Built a production PDF/DOCX editor in Next.js with real-time multi-user collaboration and autosave, supporting files up to 50MB across 5,000+ documents.",
-        "Improved database query performance by 60% through indexing, query optimization, and schema design for document workflows.",
-        "Managed high-availability Elasticsearch cluster on AWS EC2; deployed containerized services with Docker and Jenkins CI/CD.",
-      ],
-      tech: ["Next.js", "FastAPI", "Python", "Supabase", "PostgreSQL", "Elasticsearch", "Docker"],
+      location: "Remote",
+      align: "left",
+      description:
+        "Developed an AI-powered document analysis platform end-to-end using Next.js, FastAPI, Python, and Supabase with real-time multi-user collaboration and 60% query speedup.",
+      tech: ["Next.js", "FastAPI", "Python", "Supabase", "PostgreSQL"],
     },
   ];
 
   return (
-    <section id="experience" className="py-20 bg-[#F8FAFC] dark:bg-slate-900 border-t border-slate-200/80 dark:border-slate-800">
+    <section id="experience" className="py-20 bg-white border-t border-slate-100">
       <div className="section-container">
-        {/* Header matching Figma */}
+        {/* Header matching screenshot */}
         <div className="max-w-3xl mx-auto text-center mb-16 space-y-3">
-          <h2 className="text-3xl sm:text-4xl font-extrabold text-[#0F172A] dark:text-white tracking-tight">
+          <h2 className="text-3xl sm:text-4xl font-extrabold text-[#0F172A] tracking-tight">
             Work Experience
           </h2>
-          <p className="text-[#64748B] dark:text-slate-400 text-base sm:text-lg leading-relaxed">
-            My professional journey in software engineering
+          <p className="text-[#64748B] text-base sm:text-lg leading-relaxed">
+            My professional journey and the impact I've made at each organization
           </p>
         </div>
 
-        {/* Vertical Timeline Container matching Figma */}
-        <div className="max-w-4xl mx-auto relative space-y-8">
-          <div className="absolute top-4 bottom-4 left-6 sm:left-1/2 w-0.5 bg-slate-200 dark:bg-slate-800 -translate-x-1/2 hidden sm:block" />
+        {/* Central Vertical Timeline matching screenshot */}
+        <div className="max-w-5xl mx-auto relative">
+          {/* Central Line */}
+          <div className="absolute top-0 bottom-0 left-1/2 w-0.5 bg-slate-200 -translate-x-1/2 hidden md:block" />
 
-          {experiences.map((exp, index) => (
-            <motion.div
-              key={exp.company + exp.role}
-              initial={{ opacity: 0, y: 15 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.4, delay: index * 0.1 }}
-              viewport={{ once: true }}
-              className="relative"
-            >
-              <div className="figma-card hover:border-slate-300 dark:hover:border-slate-700 space-y-4">
-                <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-2 border-b border-slate-100 dark:border-slate-800 pb-4">
-                  <div>
-                    <div className="flex items-center gap-2">
-                      <Building2 className="h-5 w-5 text-slate-900 dark:text-white" />
-                      <h3 className="text-xl font-bold text-[#0F172A] dark:text-white">{exp.company}</h3>
-                      <span className="px-3 py-0.5 rounded-full text-xs font-semibold bg-slate-100 dark:bg-slate-800 text-slate-800 dark:text-slate-200">
-                        {exp.role}
-                      </span>
+          <div className="space-y-12">
+            {experiences.map((exp, index) => {
+              const isLeft = exp.align === "left";
+              return (
+                <div key={exp.company + exp.role} className="relative flex items-center justify-between md:justify-normal">
+                  {/* Timeline Dot Node matching screenshot */}
+                  <div className="absolute left-1/2 -translate-x-1/2 h-4 w-4 rounded-full border-2 border-[#0B0F17] bg-white z-10 hidden md:block" />
+
+                  {/* Card Container alternating left & right */}
+                  <motion.div
+                    initial={{ opacity: 0, y: 15 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 0.4, delay: index * 0.1 }}
+                    viewport={{ once: true }}
+                    className={`w-full md:w-[46%] ${
+                      isLeft ? "md:mr-auto" : "md:ml-auto"
+                    }`}
+                  >
+                    <div className="bg-white border border-slate-200/80 rounded-2xl p-6 space-y-4 shadow-sm hover:border-slate-300 transition-all">
+                      <div>
+                        <h3 className="text-lg font-bold text-[#0F172A]">{exp.role}</h3>
+                        <p className="text-sm font-semibold text-slate-700">{exp.company}</p>
+                      </div>
+
+                      <div className="flex flex-wrap items-center gap-4 text-xs text-[#64748B]">
+                        <span className="flex items-center gap-1">
+                          <Calendar className="h-3.5 w-3.5" />
+                          {exp.period}
+                        </span>
+                        <span className="flex items-center gap-1">
+                          <MapPin className="h-3.5 w-3.5" />
+                          {exp.location}
+                        </span>
+                      </div>
+
+                      <p className="text-xs sm:text-sm text-[#64748B] leading-relaxed">
+                        {exp.description}
+                      </p>
+
+                      <div className="flex flex-wrap gap-1.5 pt-2 border-t border-slate-100">
+                        {exp.tech.map((t) => (
+                          <span key={t} className="bg-[#F1F5F9] text-[#334155] text-[11px] font-medium rounded-md px-2.5 py-1">
+                            {t}
+                          </span>
+                        ))}
+                      </div>
                     </div>
-                  </div>
-
-                  <div className="flex flex-wrap items-center gap-4 text-xs font-medium text-[#64748B] dark:text-slate-400">
-                    <span className="flex items-center gap-1">
-                      <Calendar className="h-3.5 w-3.5" />
-                      {exp.period}
-                    </span>
-                    <span className="flex items-center gap-1">
-                      <MapPin className="h-3.5 w-3.5" />
-                      {exp.location}
-                    </span>
-                  </div>
+                  </motion.div>
                 </div>
-
-                <div className="space-y-2.5 pt-1">
-                  {exp.points.map((pt, i) => (
-                    <div key={i} className="flex items-start gap-2.5 text-xs sm:text-sm text-[#64748B] dark:text-slate-300 leading-relaxed">
-                      <CheckCircle2 className="h-4 w-4 text-slate-900 dark:text-white shrink-0 mt-0.5" />
-                      <span>{pt}</span>
-                    </div>
-                  ))}
-                </div>
-
-                <div className="flex flex-wrap gap-1.5 pt-3 border-t border-slate-100 dark:border-slate-800">
-                  {exp.tech.map((t) => (
-                    <span key={t} className="figma-skill-chip text-[11px] py-0.5 px-2.5">
-                      {t}
-                    </span>
-                  ))}
-                </div>
-              </div>
-            </motion.div>
-          ))}
+              );
+            })}
+          </div>
         </div>
       </div>
     </section>
