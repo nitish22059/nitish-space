@@ -9,9 +9,7 @@ const ProjectsSection = () => {
     {
       id: "bookannotator",
       title: "BookAnnotatorPro",
-      tagline: "Multimodal Vision AI & PDF.js Token Extraction Engine",
-      category: "Full-Stack & AI",
-      imageBg: "bg-gradient-to-r from-slate-900 to-slate-800",
+      image: "/project-1.jpg",
       description:
         "Engineered a digital annotation platform that extracts physical book highlights using browser-side PDF.js tokens and maps them accurately onto digital PDF documents via vision AI models.",
       highlights: [
@@ -19,16 +17,14 @@ const ProjectsSection = () => {
         "Asynchronous PostgreSQL-backed job queue with FOR UPDATE SKIP LOCKED for vision workloads.",
         "Built responsive React 19 interface with Tailwind CSS & shadcn/ui + Playwright E2E test suite.",
       ],
-      tech: ["TypeScript", "React 19", "Next.js", "Node.js", "PostgreSQL", "Supabase", "PDF.js", "Playwright"],
+      tech: ["TypeScript", "React 19", "Node.js", "PostgreSQL", "Supabase", "PDF.js"],
       githubUrl: "https://github.com/Nitish-Naik",
       liveDemo: "https://github.com/Nitish-Naik",
     },
     {
       id: "ai-document-platform",
       title: "AI Document Analysis & Real-Time Editor",
-      tagline: "Collaborative PDF/DOCX Editor supporting 5,000+ docs up to 50MB",
-      category: "Enterprise Full-Stack",
-      imageBg: "bg-gradient-to-r from-slate-800 to-slate-900",
+      image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=800&q=80",
       description:
         "Built end-to-end at Blackcoffer using Next.js, FastAPI, Python, and Supabase. Features real-time multi-user collaboration, autosave, and high-performance document indexing.",
       highlights: [
@@ -36,16 +32,14 @@ const ProjectsSection = () => {
         "Optimized database query performance by 60% through custom PostgreSQL indexing & schema design.",
         "Elasticsearch on AWS EC2 + containerized backend with Docker and Jenkins CI/CD.",
       ],
-      tech: ["Next.js", "FastAPI", "Python", "Supabase", "PostgreSQL", "Elasticsearch", "AWS EC2", "Docker"],
+      tech: ["Next.js", "TypeScript", "FastAPI", "Python", "Supabase", "PostgreSQL"],
       githubUrl: "https://github.com/Nitish-Naik",
       liveDemo: "https://github.com/Nitish-Naik",
     },
     {
       id: "npm-crawler",
       title: "NPM Dependency Graph Crawler",
-      tagline: "High-concurrency Rust/PyO3 BFS traversal over 3M+ npm packages",
-      category: "Systems & Data Infrastructure",
-      imageBg: "bg-gradient-to-r from-slate-900 to-slate-700",
+      image: "https://images.unsplash.com/photo-1504868584819-f8e8b4b6d7e3?auto=format&fit=crop&w=800&q=80",
       description:
         "Engineered a high-throughput crawler mapping the multi-million-edge npm dependency graph, backed by a durable PostgreSQL work queue and Rust native acceleration.",
       highlights: [
@@ -55,42 +49,25 @@ const ProjectsSection = () => {
       ],
       tech: ["Python", "Rust", "PyO3", "PostgreSQL", "Docker", "Async I/O"],
       githubUrl: "https://github.com/Nitish-Naik",
-      liveDemo: undefined,
-    },
-    {
-      id: "infosys-ecommerce",
-      title: "12-Market International E-Commerce Platform",
-      tagline: "Infosys Next.js & Node.js Microservices at Scale",
-      category: "Production Scale",
-      imageBg: "bg-gradient-to-r from-slate-800 to-slate-950",
-      description:
-        "Built end-to-end features for a high-traffic international e-commerce platform serving 12 markets with SSR, SSG, CDN caching, and zero-downtime microservice migrations.",
-      highlights: [
-        "Node.js/Express microservices with PostgreSQL, MongoDB, Redis, JWT, RBAC & OAuth2.",
-        "Sub-second page loads via Next.js SSR/SSG, code-splitting, and CDN caching.",
-        "Automated Playwright, Jest, and RTL testing covering critical buyer checkout flows.",
-      ],
-      tech: ["Next.js", "React", "TypeScript", "Node.js", "PostgreSQL", "Redis", "Playwright"],
-      githubUrl: undefined,
-      liveDemo: undefined,
+      liveDemo: "https://github.com/Nitish-Naik",
     },
   ];
 
   return (
-    <section id="projects" className="py-20 bg-white dark:bg-slate-950 border-t border-slate-100 dark:border-slate-800">
+    <section id="projects" className="py-20 bg-[#F8FAFC] border-t border-slate-200/80">
       <div className="section-container">
-        {/* Header matching Figma */}
+        {/* Header matching screenshot */}
         <div className="max-w-3xl mx-auto text-center mb-16 space-y-3">
-          <h2 className="text-3xl sm:text-4xl font-extrabold text-[#0F172A] dark:text-white tracking-tight">
+          <h2 className="text-3xl sm:text-4xl font-extrabold text-[#0F172A] tracking-tight">
             Featured Projects
           </h2>
-          <p className="text-[#64748B] dark:text-slate-400 text-base sm:text-lg leading-relaxed">
-            A showcase of my recent work and engineering achievements
+          <p className="text-[#64748B] text-base sm:text-lg leading-relaxed">
+            A selection of projects that showcase my skills and problem-solving abilities
           </p>
         </div>
 
-        {/* 3-Column Card Deck Grid matching Figma */}
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
+        {/* 3-Column Card Deck Grid matching screenshot */}
+        <div className="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
           {projects.map((project, index) => (
             <motion.div
               key={project.id}
@@ -98,58 +75,50 @@ const ProjectsSection = () => {
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.4, delay: index * 0.1 }}
               viewport={{ once: true }}
-              className="figma-card overflow-hidden flex flex-col justify-between hover:border-slate-300 dark:hover:border-slate-700 transition-all duration-300"
+              className="bg-white border border-slate-200/80 rounded-2xl overflow-hidden shadow-sm flex flex-col justify-between hover:border-slate-300 transition-all"
             >
-              <div className="space-y-4">
-                {/* Visual Header Banner matching Figma */}
-                <div className={`h-36 -mx-6 sm:-mx-8 -mt-6 sm:-mt-8 ${project.imageBg} p-6 flex flex-col justify-between text-white relative`}>
-                  <span className="self-start px-2.5 py-0.5 rounded-full bg-black/40 text-[11px] font-bold tracking-wide uppercase">
-                    {project.category}
-                  </span>
-                  <div>
-                    <h3 className="text-lg font-bold tracking-tight">{project.title}</h3>
-                    <p className="text-xs text-white/80 line-clamp-1">{project.tagline}</p>
-                  </div>
+              <div>
+                {/* Image Banner matching screenshot */}
+                <div className="h-48 w-full overflow-hidden bg-slate-100">
+                  <img
+                    src={project.image}
+                    alt={project.title}
+                    className="w-full h-full object-cover hover:scale-105 transition-transform duration-500"
+                  />
                 </div>
 
-                <p className="text-xs sm:text-sm text-[#64748B] dark:text-slate-300 leading-relaxed pt-1">
-                  {project.description}
-                </p>
+                <div className="p-6 space-y-3">
+                  <h3 className="text-base font-bold text-[#0F172A]">{project.title}</h3>
+                  <p className="text-xs text-[#64748B] leading-relaxed">
+                    {project.description}
+                  </p>
 
-                {/* Tech Badges matching Figma */}
-                <div className="flex flex-wrap gap-1.5 pt-2">
-                  {project.tech.map((t) => (
-                    <span key={t} className="figma-skill-chip text-[11px] py-1 px-2.5">
-                      {t}
-                    </span>
-                  ))}
+                  {/* Tech Badges matching screenshot */}
+                  <div className="flex flex-wrap gap-1.5 pt-2">
+                    {project.tech.map((t) => (
+                      <span key={t} className="bg-[#F1F5F9] text-[#334155] text-[11px] font-medium rounded-md px-2.5 py-1">
+                        {t}
+                      </span>
+                    ))}
+                  </div>
                 </div>
               </div>
 
-              {/* Action Buttons Footer matching Figma */}
-              <div className="pt-6 mt-6 border-t border-slate-100 dark:border-slate-800 flex items-center justify-between gap-3">
-                {project.githubUrl ? (
-                  <a
-                    href={project.githubUrl}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="figma-btn-outline py-1.5 px-4 text-xs"
-                  >
-                    <Github className="h-3.5 w-3.5" />
-                    Code
-                  </a>
-                ) : (
-                  <button
-                    onClick={() => setSelectedProject(project)}
-                    className="figma-btn-outline py-1.5 px-4 text-xs"
-                  >
-                    Details
-                  </button>
-                )}
+              {/* Action Buttons Footer matching screenshot */}
+              <div className="p-6 pt-0 flex items-center gap-3">
+                <a
+                  href={project.githubUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="border border-slate-200 text-[#0F172A] bg-white hover:bg-slate-50 rounded-md px-3.5 py-1.5 text-xs font-medium inline-flex items-center gap-1.5 transition-colors"
+                >
+                  <Github className="h-3.5 w-3.5" />
+                  Code
+                </a>
 
                 <button
                   onClick={() => setSelectedProject(project)}
-                  className="figma-btn-dark py-1.5 px-4 text-xs"
+                  className="bg-[#0B0F17] hover:bg-[#1E293B] text-white rounded-md px-3.5 py-1.5 text-xs font-medium inline-flex items-center gap-1.5 transition-colors"
                 >
                   <ExternalLink className="h-3.5 w-3.5" />
                   Live Demo
@@ -170,16 +139,15 @@ const ProjectsSection = () => {
           <motion.div
             initial={{ opacity: 0, scale: 0.95 }}
             animate={{ opacity: 1, scale: 1 }}
-            className="bg-white dark:bg-slate-900 rounded-3xl shadow-2xl max-w-2xl w-full border border-slate-200 dark:border-slate-800 overflow-hidden flex flex-col max-h-[90vh]"
+            className="bg-white rounded-3xl shadow-2xl max-w-2xl w-full border border-slate-200 overflow-hidden flex flex-col max-h-[90vh]"
           >
-            <div className={`p-6 ${selectedProject.imageBg} text-white flex items-center justify-between`}>
+            <div className="p-6 bg-slate-900 text-white flex items-center justify-between">
               <div>
-                <span className="text-xs uppercase font-bold text-white/80">{selectedProject.category}</span>
-                <h3 className="text-2xl font-bold">{selectedProject.title}</h3>
+                <h3 className="text-xl font-bold">{selectedProject.title}</h3>
               </div>
               <button
                 onClick={() => setSelectedProject(null)}
-                className="p-1 rounded-lg bg-black/20 hover:bg-black/40 text-white transition-colors"
+                className="p-1 rounded-lg bg-white/20 hover:bg-white/40 text-white transition-colors"
               >
                 <X className="h-6 w-6" />
               </button>
@@ -188,7 +156,7 @@ const ProjectsSection = () => {
             <div className="p-6 space-y-6 overflow-auto">
               <div>
                 <h4 className="text-xs font-bold uppercase tracking-wider text-slate-400 mb-2">Overview</h4>
-                <p className="text-slate-700 dark:text-slate-300 text-sm leading-relaxed">
+                <p className="text-slate-700 text-sm leading-relaxed">
                   {selectedProject.description}
                 </p>
               </div>
@@ -197,9 +165,9 @@ const ProjectsSection = () => {
                 <h4 className="text-xs font-bold uppercase tracking-wider text-slate-400 mb-3">Key Highlights</h4>
                 <div className="space-y-2">
                   {selectedProject.highlights.map((h: string, idx: number) => (
-                    <div key={idx} className="p-3 rounded-xl bg-slate-50 dark:bg-slate-800/60 border border-slate-100 dark:border-slate-800 flex items-start gap-3">
+                    <div key={idx} className="p-3 rounded-xl bg-slate-50 border border-slate-100 flex items-start gap-3">
                       <CheckCircle2 className="h-4 w-4 text-slate-900 shrink-0 mt-0.5" />
-                      <p className="text-xs text-slate-700 dark:text-slate-300 font-medium">{h}</p>
+                      <p className="text-xs text-slate-700 font-medium">{h}</p>
                     </div>
                   ))}
                 </div>
@@ -209,7 +177,7 @@ const ProjectsSection = () => {
                 <h4 className="text-xs font-bold uppercase tracking-wider text-slate-400 mb-2">Technologies Used</h4>
                 <div className="flex flex-wrap gap-2">
                   {selectedProject.tech.map((t: string) => (
-                    <span key={t} className="figma-skill-chip">
+                    <span key={t} className="bg-[#F1F5F9] text-[#334155] text-xs font-medium rounded-lg px-3 py-1.5 border border-slate-200/40">
                       {t}
                     </span>
                   ))}

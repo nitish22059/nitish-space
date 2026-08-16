@@ -1,45 +1,45 @@
 import { motion } from "framer-motion";
-import { Code, Zap, Users, Lightbulb, GraduationCap, Building2, Briefcase, CheckCircle2 } from "lucide-react";
+import { Code2, Zap, Users, Coffee } from "lucide-react";
 
 const AboutSection = () => {
   const highlights = [
     {
       title: "Clean Code",
-      desc: "Writing readable, maintainable, and type-safe Next.js & TypeScript code built for long-term scalability.",
-      icon: Code,
+      desc: "Writing maintainable, scalable, and efficient code is my passion",
+      icon: Code2,
     },
     {
       title: "Fast Learner",
-      desc: "Quickly adapting to new AI frameworks, Supabase PostgreSQL schemas, Stripe webhooks, and project requirements.",
+      desc: "Quick to adapt to new technologies and frameworks",
       icon: Zap,
     },
     {
       title: "Team Player",
-      desc: "Collaborating effectively with non-technical founders & cross-functional teams to turn vision into reality.",
+      desc: "Collaborative approach to solving complex problems",
       icon: Users,
     },
     {
       title: "Problem Solver",
-      desc: "Architecting high-performance database queries, real-time collaboration engines, and zero-downtime migrations.",
-      icon: Lightbulb,
+      desc: "Love tackling challenging technical problems over coffee",
+      icon: Coffee,
     },
   ];
 
   return (
-    <section id="about" className="py-20 bg-white dark:bg-slate-950 border-t border-slate-100 dark:border-slate-800">
+    <section id="about" className="py-20 bg-[#F8FAFC] border-t border-slate-200/80">
       <div className="section-container">
-        {/* Section Header matching Figma */}
+        {/* Section Header matching screenshot */}
         <div className="max-w-3xl mx-auto text-center mb-16 space-y-3">
-          <h2 className="text-3xl sm:text-4xl font-extrabold text-[#0F172A] dark:text-white tracking-tight">
+          <h2 className="text-3xl sm:text-4xl font-extrabold text-[#0F172A] tracking-tight">
             About Me
           </h2>
-          <p className="text-[#64748B] dark:text-slate-400 text-base sm:text-lg leading-relaxed">
-            Passionate software engineer with experience building scalable applications
+          <p className="text-[#64748B] text-base sm:text-lg leading-relaxed">
+            Passionate software engineer with experience building web applications
           </p>
         </div>
 
         <div className="grid lg:grid-cols-12 gap-10 items-start max-w-5xl mx-auto">
-          {/* Left Column: My Story matching Figma */}
+          {/* Left Column: My Story matching screenshot */}
           <motion.div
             className="lg:col-span-6 space-y-6"
             initial={{ opacity: 0, x: -15 }}
@@ -47,46 +47,26 @@ const AboutSection = () => {
             transition={{ duration: 0.5 }}
             viewport={{ once: true }}
           >
-            <div className="figma-card space-y-5">
-              <h3 className="text-xl font-bold text-[#0F172A] dark:text-white border-b border-slate-100 dark:border-slate-800 pb-4">
+            <div className="bg-white border border-slate-200/80 rounded-2xl p-6 sm:p-8 space-y-5 shadow-sm">
+              <h3 className="text-xl font-bold text-[#0F172A] border-b border-slate-100 pb-4">
                 My Story
               </h3>
 
-              <div className="space-y-4 text-[#64748B] dark:text-slate-300 text-sm sm:text-base leading-relaxed">
+              <div className="space-y-4 text-[#64748B] text-sm sm:text-base leading-relaxed">
                 <p>
-                  I'm a <strong className="text-[#0F172A] dark:text-white">Digital Specialist Engineer L1 at Infosys</strong>, where I develop end-to-end features for large-scale e-commerce platforms serving 12 international markets using <strong>Next.js, React, TypeScript, and Node.js</strong>.
+                  I'm a <strong className="text-[#0F172A]">Digital Specialist Engineer L1 at Infosys</strong>, where I develop end-to-end features for large-scale e-commerce platforms serving 12 international markets using <strong>Next.js, React, TypeScript, and Node.js</strong>.
                 </p>
                 <p>
-                  My background spans backend engineering at <strong className="text-[#0F172A] dark:text-white">Parsewave LLC</strong> (building automated LLM training data pipelines in Python & Pandas) and Associate Software Engineer at <strong className="text-[#0F172A] dark:text-white">Blackcoffer</strong>, where I built an end-to-end AI document platform with real-time multi-user editing and Supabase PostgreSQL.
+                  My background includes backend engineering at <strong className="text-[#0F172A]">Parsewave LLC</strong> (building automated LLM training data pipelines in Python & Pandas) and Associate Software Engineer at <strong className="text-[#0F172A]">Blackcoffer</strong>, where I built an end-to-end AI document platform with real-time multi-user editing and Supabase PostgreSQL.
                 </p>
                 <p>
                   I graduated with a <strong>Bachelor of Technology in Computer Science & Engineering</strong> from Chaitanya Bharathi Institute of Technology with an <strong>8.81 / 10 CGPA</strong>, along with open-source contributions to OWASP-BLT and Unsiloed-AI.
                 </p>
               </div>
-
-              {/* Quick Resume Badges */}
-              <div className="pt-4 border-t border-slate-100 dark:border-slate-800 grid sm:grid-cols-2 gap-3 text-xs">
-                <div className="flex items-center gap-2 text-slate-700 dark:text-slate-300 font-medium">
-                  <Building2 className="h-4 w-4 text-slate-900 shrink-0" />
-                  <span>Infosys • Next.js Engineer</span>
-                </div>
-                <div className="flex items-center gap-2 text-slate-700 dark:text-slate-300 font-medium">
-                  <Briefcase className="h-4 w-4 text-slate-900 shrink-0" />
-                  <span>Parsewave LLC • LLM Pipelines</span>
-                </div>
-                <div className="flex items-center gap-2 text-slate-700 dark:text-slate-300 font-medium">
-                  <GraduationCap className="h-4 w-4 text-slate-900 shrink-0" />
-                  <span>CBIT Hyderabad • 8.81 CGPA</span>
-                </div>
-                <div className="flex items-center gap-2 text-slate-700 dark:text-slate-300 font-medium">
-                  <CheckCircle2 className="h-4 w-4 text-slate-900 shrink-0" />
-                  <span>OWASP & Unsiloed Contributor</span>
-                </div>
-              </div>
             </div>
           </motion.div>
 
-          {/* Right Column: 4 Feature Cards matching Figma */}
+          {/* Right Column: 2x2 Grid of 4 Feature Cards matching screenshot */}
           <motion.div
             className="lg:col-span-6 grid sm:grid-cols-2 gap-5"
             initial={{ opacity: 0, x: 15 }}
@@ -99,13 +79,13 @@ const AboutSection = () => {
               return (
                 <div
                   key={item.title}
-                  className="figma-card hover:border-slate-300 transition-all space-y-3"
+                  className="bg-white border border-slate-200/80 rounded-2xl p-6 text-center space-y-3 shadow-sm hover:border-slate-300 transition-all"
                 >
-                  <div className="h-10 w-10 rounded-xl bg-slate-100 dark:bg-slate-800 text-slate-900 dark:text-white flex items-center justify-center">
+                  <div className="h-10 w-10 rounded-xl bg-[#F1F5F9] text-slate-800 flex items-center justify-center mx-auto">
                     <Icon className="h-5 w-5" />
                   </div>
-                  <h4 className="text-lg font-bold text-[#0F172A] dark:text-white">{item.title}</h4>
-                  <p className="text-xs sm:text-sm text-[#64748B] dark:text-slate-400 leading-relaxed">{item.desc}</p>
+                  <h4 className="text-base font-bold text-[#0F172A]">{item.title}</h4>
+                  <p className="text-xs text-[#64748B] leading-relaxed">{item.desc}</p>
                 </div>
               );
             })}
