@@ -1,66 +1,121 @@
-import { motion, useInView } from "framer-motion";
-import { useRef } from "react";
+import { motion } from "framer-motion";
+import { Layout, Server, Cloud, Bot } from "lucide-react";
 
 const SkillsSection = () => {
-  const ref = useRef(null);
-  const isInView = useInView(ref, { once: true });
-
-  const groups = [
+  const skillCategories = [
     {
-      title: "Core Languages",
-      skills: ["Python", "TypeScript", "JavaScript", "Java", "Go"],
+      title: "Frontend Development",
+      icon: Layout,
+      color: "text-blue-600 dark:text-blue-400",
+      bg: "bg-blue-50 dark:bg-blue-950/60",
+      skills: [
+        "Next.js (App Router)",
+        "React 19",
+        "TypeScript",
+        "Tailwind CSS",
+        "HTML5 / CSS3",
+        "Redux Toolkit",
+        "shadcn/ui",
+        "SSR & SSG Optimization",
+        "Figma to Code",
+      ],
     },
     {
-      title: "Backend",
-      skills: ["Node.js", "Express.js", "FastAPI", "REST APIs", "WebSockets", "Microservices"],
+      title: "Backend & Databases",
+      icon: Server,
+      color: "text-indigo-600 dark:text-indigo-400",
+      bg: "bg-indigo-50 dark:bg-indigo-950/60",
+      skills: [
+        "Node.js & Express.js",
+        "PostgreSQL",
+        "Supabase SQL",
+        "FastAPI (Python)",
+        "MongoDB",
+        "Redis Caching & Streams",
+        "JWT / RBAC / OAuth2",
+        "REST APIs",
+        "WebSockets",
+      ],
     },
     {
-      title: "Data & Infrastructure",
-      skills: ["PostgreSQL", "Redis Streams", "Kafka", "PySpark", "MongoDB", "MySQL", "Docker", "Linux", "Git"],
+      title: "Cloud, Testing & DevOps",
+      icon: Cloud,
+      color: "text-purple-600 dark:text-purple-400",
+      bg: "bg-purple-50 dark:bg-purple-950/60",
+      skills: [
+        "Vercel Deployment",
+        "AWS EC2",
+        "Docker & Containerization",
+        "GitHub Actions",
+        "Jenkins CI/CD",
+        "Playwright E2E Testing",
+        "Jest & React Testing Library",
+        "Linux Runtime",
+      ],
     },
     {
-      title: "Systems",
-      skills: ["Distributed Systems", "Data Pipelines", "Web Scraping", "Async Processing", "Concurrency", "Benchmarking"],
-    },
-    {
-      title: "Frontend",
-      skills: ["Next.js", "React", "Tailwind CSS", "HTML/CSS", "Supabase"],
-    },
-    {
-      title: "AI",
-      skills: ["OpenAI APIs", "LLM Integration", "Prompt Engineering", "Anomaly Detection"],
+      title: "AI, Payments & AEO / SEO",
+      icon: Bot,
+      color: "text-emerald-600 dark:text-emerald-400",
+      bg: "bg-emerald-50 dark:bg-emerald-950/60",
+      skills: [
+        "Stripe Billing & Webhooks",
+        "LLM Data Ingestion & Fine-Tuning",
+        "AI Agentic Workflows",
+        "AEO & GEO (AI SEO)",
+        "JSON-LD Schema Markup",
+        "PDF.js Vision Token Extraction",
+        "Claude & Copilot Workflows",
+      ],
     },
   ];
 
   return (
-    <section id="skills" className="py-20 bg-muted/30" ref={ref}>
+    <section id="skills" className="py-20 bg-white dark:bg-slate-900">
       <div className="section-container">
-        <div className="max-w-3xl mx-auto text-center mb-10">
-          <h2 className="section-title fade-in">Skills</h2>
-          <p className="text-muted-foreground">
-            Organized by the kind of work I do most: backend systems, data infrastructure, distributed workflows, and product engineering.
+        {/* Header */}
+        <div className="max-w-3xl mx-auto text-center mb-16">
+          <p className="text-xs font-bold uppercase tracking-wider text-blue-600 dark:text-blue-400 mb-2">
+            Skills & Technologies
+          </p>
+          <h2 className="text-3xl sm:text-4xl font-extrabold text-slate-900 dark:text-white tracking-tight mb-4">
+            A comprehensive toolkit for modern full-stack web development
+          </h2>
+          <p className="text-slate-600 dark:text-slate-400 text-base sm:text-lg leading-relaxed">
+            Technologies and frameworks I use to build scalable web applications, real-time engines, and AI systems.
           </p>
         </div>
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-5">
-          {groups.map((group, index) => (
-            <motion.div
-              key={group.title}
-              className="bg-card border border-border rounded-lg p-5 shadow-sm"
-              initial={{ opacity: 0, y: 16 }}
-              animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 16 }}
-              transition={{ duration: 0.45, delay: index * 0.08 }}
-            >
-              <h3 className="font-semibold text-lg mb-4">{group.title}</h3>
-              <div className="flex flex-wrap gap-2">
-                {group.skills.map((skill) => (
-                  <span key={skill} className="px-2.5 py-1 text-xs bg-secondary text-secondary-foreground rounded border">
-                    {skill}
-                  </span>
-                ))}
-              </div>
-            </motion.div>
-          ))}
+        {/* 4 Skill Cards Grid */}
+        <div className="grid md:grid-cols-2 gap-8 max-w-5xl mx-auto">
+          {skillCategories.map((cat, index) => {
+            const Icon = cat.icon;
+            return (
+              <motion.div
+                key={cat.title}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.4, delay: index * 0.1 }}
+                viewport={{ once: true }}
+                className="figma-card hover:border-slate-300 dark:hover:border-slate-700 space-y-5"
+              >
+                <div className="flex items-center gap-3.5 border-b border-slate-100 dark:border-slate-800 pb-4">
+                  <div className={`h-11 w-11 rounded-xl ${cat.bg} ${cat.color} flex items-center justify-center shrink-0`}>
+                    <Icon className="h-5 w-5" />
+                  </div>
+                  <h3 className="text-xl font-bold text-slate-900 dark:text-white">{cat.title}</h3>
+                </div>
+
+                <div className="flex flex-wrap gap-2 pt-1">
+                  {cat.skills.map((skill) => (
+                    <span key={skill} className="figma-badge">
+                      {skill}
+                    </span>
+                  ))}
+                </div>
+              </motion.div>
+            );
+          })}
         </div>
       </div>
     </section>
