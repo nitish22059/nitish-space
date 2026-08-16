@@ -1,9 +1,12 @@
 import Navbar from "@/components/Navbar";
 import HeroSection from "@/components/HeroSection";
+import ElvoroProposalSection from "@/components/ElvoroProposalSection";
+import ElvoroAiPlayground from "@/components/ElvoroAiPlayground";
+import AeoEngineSection from "@/components/AeoEngineSection";
 import AboutSection from "@/components/AboutSection";
 import SkillsSection from "@/components/SkillsSection";
 import ProjectsSection from "@/components/ProjectsSection";
-import OpenSourceSection from "@/components/OpenSourceSection";
+import ExperienceSection from "@/components/ExperienceSection";
 import EducationSection from "@/components/EducationSection";
 import ContactSection from "@/components/ContactSection";
 import FooterSection from "@/components/FooterSection";
@@ -11,15 +14,18 @@ import ScrollProgress from "@/components/ScrollProgress";
 
 const Index = () => {
   return (
-    <div className="min-h-screen relative">
+    <div className="min-h-screen relative bg-background text-foreground selection:bg-blue-500/20 selection:text-blue-600">
       <ScrollProgress />
       <Navbar />
       <HeroSection />
-      <ProjectsSection />
+      <ElvoroProposalSection />
+      <ElvoroAiPlayground />
+      <AeoEngineSection />
       <AboutSection />
-      <EducationSection />
       <SkillsSection />
-      <OpenSourceSection />
+      <ProjectsSection />
+      <ExperienceSection />
+      <EducationSection />
       <ContactSection />
       <FooterSection />
     </div>
