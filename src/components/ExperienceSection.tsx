@@ -10,14 +10,14 @@ const ExperienceSection = () => {
       location: "Bengaluru, India",
       align: "left",
       description:
-        "Built end-to-end features for a large-scale e-commerce platform using Next.js, React, TypeScript, and Node.js across 12 international markets. Developed microservices with PostgreSQL, MongoDB, Redis, JWT, RBAC & OAuth2.",
+        "Built end-to-end features for a large-scale e-commerce platform using Next.js, React, TypeScript, and Node.js across international markets. Developed microservices with PostgreSQL, MongoDB, Redis, JWT, RBAC & OAuth2.",
       tech: ["Next.js", "React", "TypeScript", "Node.js", "PostgreSQL"],
     },
     {
       company: "Parsewave LLC",
       role: "Backend Engineer",
-      period: "November 2025 – May 2026",
-      location: "Remote",
+      period: "November 2025 – Feb 2026",
+      location: "Remote, Part-time",
       align: "right",
       description:
         "Built end-to-end Python/Pandas data pipelines for generating LLM training and fine-tuning datasets, covering ingestion, cleaning, validation, deduplication, and export.",

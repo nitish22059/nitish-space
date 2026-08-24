@@ -9,7 +9,6 @@ const ProjectsSection = () => {
     {
       id: "bookannotator",
       title: "BookAnnotatorPro",
-      image: "/project-1.jpg",
       description:
         "Engineered a digital annotation platform that extracts physical book highlights using browser-side PDF.js tokens and maps them accurately onto digital PDF documents via vision AI models.",
       highlights: [
@@ -18,28 +17,54 @@ const ProjectsSection = () => {
         "Built responsive React 19 interface with Tailwind CSS & shadcn/ui + Playwright E2E test suite.",
       ],
       tech: ["TypeScript", "React 19", "Node.js", "PostgreSQL", "Supabase", "PDF.js"],
-      githubUrl: "https://github.com/Nitish-Naik",
-      liveDemo: "https://github.com/Nitish-Naik",
+      githubUrl: "https://github.com/Nitish-Naik/book-annotator-pro",
+      liveDemo: "https://github.com/Nitish-Naik/book-annotator-pro",
     },
     {
-      id: "ai-document-platform",
-      title: "AI Document Analysis & Real-Time Editor",
-      image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=800&q=80",
+      id: "logiq",
+      title: "Instant Dev Logs – Distributed Logging Platform",
       description:
-        "Built end-to-end at Blackcoffer using Next.js, FastAPI, Python, and Supabase. Features real-time multi-user collaboration, autosave, and high-performance document indexing.",
+        "Designed an event-driven log ingestion pipeline using Redis Streams as the buffer between producers and consumers, with PostgreSQL for durable storage. Built the dashboard frontend in Next.js + Tailwind for real-time log streaming and filtering.",
       highlights: [
-        "Real-time multi-user collaboration and autosave for large documents up to 50MB.",
-        "Optimized database query performance by 60% through custom PostgreSQL indexing & schema design.",
-        "Elasticsearch on AWS EC2 + containerized backend with Docker and Jenkins CI/CD.",
+        "Designed an event-driven log ingestion pipeline using Redis Streams as the buffer between producers and consumers, with PostgreSQL for durable storage.",
+        "Implemented failure detection, retry handling, and an ingestion-lag observability layer; documented architecture trade-offs across Redis Streams, Kafka, and direct DB writes.",
+        "Built the dashboard frontend in Next.js + Tailwind for real-time log streaming and filtering.",
       ],
-      tech: ["Next.js", "TypeScript", "FastAPI", "Python", "Supabase", "PostgreSQL"],
-      githubUrl: "https://github.com/Nitish-Naik",
-      liveDemo: "https://github.com/Nitish-Naik",
+      tech: ["Node.js", "Redis Streams", "PostgreSQL", "Docker", "Next.js", "Tailwind"],
+      githubUrl: "https://github.com/Nitish-Naik/LogIQ",
+      liveDemo: "https://instantdevlogs.netlify.app/",
+    },
+    {
+      id: "distributed-scraping-pipeline",
+      title: "Distributed Web Scraping Pipeline",
+      description:
+        "Scalable distributed web scraper featuring asynchronous task queues, automatic rate limiting, and robust data normalization pipelines.",
+      highlights: [
+        "Distributed worker pool using Redis task queues and Docker containers.",
+        "Token-bucket rate limiting & IP rotation to prevent blocking across thousands of endpoints.",
+        "Automated data cleaning, deduplication, and PostgreSQL / Cloud Storage export.",
+      ],
+      tech: ["Python", "Redis", "Docker", "Async I/O", "PostgreSQL"],
+      githubUrl: "https://github.com/Nitish-Naik/Distributed-Web-Scraping-Pipeline",
+      liveDemo: "https://github.com/Nitish-Naik/Distributed-Web-Scraping-Pipeline",
+    },
+    {
+      id: "highlight-saver",
+      title: "HighlightSaver",
+      description:
+        "Highlight text on any webpage with custom colors, automatically save and restore highlights, and manage saved quotes seamlessly in Microsoft Edge and browser extensions.",
+      highlights: [
+        "Browser Extension built for Microsoft Edge & Chrome with Manifest V3 standards.",
+        "Automatic DOM text highlight restoration with persistent page state matching.",
+        "Custom color palettes, quotes management dashboard, and instant export features.",
+      ],
+      tech: ["JavaScript", "HTML/CSS", "Browser Extension", "Chrome API", "Storage API"],
+      githubUrl: "https://github.com/Nitish-Naik/highlight-saver",
+      liveDemo: "https://github.com/Nitish-Naik/highlight-saver",
     },
     {
       id: "npm-crawler",
       title: "NPM Dependency Graph Crawler",
-      image: "https://images.unsplash.com/photo-1504868584819-f8e8b4b6d7e3?auto=format&fit=crop&w=800&q=80",
       description:
         "Engineered a high-throughput crawler mapping the multi-million-edge npm dependency graph, backed by a durable PostgreSQL work queue and Rust native acceleration.",
       highlights: [
@@ -48,6 +73,20 @@ const ProjectsSection = () => {
         "Custom Rust/PyO3 native extension for fast JSON parsing and low-latency I/O.",
       ],
       tech: ["Python", "Rust", "PyO3", "PostgreSQL", "Docker", "Async I/O"],
+      githubUrl: "https://github.com/Nitish-Naik/npm-depgraph-crawler",
+      liveDemo: "https://github.com/Nitish-Naik/npm-depgraph-crawler",
+    },
+    {
+      id: "ai-document-platform",
+      title: "AI Document Analysis & Real-Time Editor",
+      description:
+        "Built end-to-end at Blackcoffer using Next.js, FastAPI, Python, and Supabase. Features real-time multi-user collaboration, autosave, and high-performance document indexing.",
+      highlights: [
+        "Real-time multi-user collaboration and autosave for large documents up to 50MB.",
+        "Optimized database query performance by 60% through custom PostgreSQL indexing & schema design.",
+        "Elasticsearch on AWS EC2 + containerized backend with Docker and Jenkins CI/CD.",
+      ],
+      tech: ["Next.js", "TypeScript", "FastAPI", "Python", "Supabase", "PostgreSQL"],
       githubUrl: "https://github.com/Nitish-Naik",
       liveDemo: "https://github.com/Nitish-Naik",
     },
@@ -66,63 +105,71 @@ const ProjectsSection = () => {
           </p>
         </div>
 
-        {/* 3-Column Card Deck Grid matching screenshot */}
-        <div className="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
+        {/* 6-Card Grid Deck (Image-free compact modern cards) */}
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
           {projects.map((project, index) => (
             <motion.div
               key={project.id}
               initial={{ opacity: 0, y: 15 }}
               whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.4, delay: index * 0.1 }}
+              transition={{ duration: 0.4, delay: index * 0.05 }}
               viewport={{ once: true }}
-              className="bg-white border border-slate-200/80 rounded-2xl overflow-hidden shadow-sm flex flex-col justify-between hover:border-slate-300 transition-all"
+              className="bg-white border border-slate-200/80 rounded-2xl p-6 shadow-sm flex flex-col justify-between hover:border-slate-300 transition-all group"
             >
-              <div>
-                {/* Image Banner matching screenshot */}
-                <div className="h-48 w-full overflow-hidden bg-slate-100">
-                  <img
-                    src={project.image}
-                    alt={project.title}
-                    className="w-full h-full object-cover hover:scale-105 transition-transform duration-500"
-                  />
+              <div className="space-y-4">
+                <div className="flex items-start justify-between gap-3">
+                  <h3
+                    className="text-base sm:text-lg font-bold text-[#0F172A] cursor-pointer hover:text-slate-700 transition-colors leading-snug"
+                    onClick={() => setSelectedProject(project)}
+                  >
+                    {project.title}
+                  </h3>
                 </div>
 
-                <div className="p-6 space-y-3">
-                  <h3 className="text-base font-bold text-[#0F172A]">{project.title}</h3>
-                  <p className="text-xs text-[#64748B] leading-relaxed">
-                    {project.description}
-                  </p>
+                <p className="text-xs text-[#64748B] leading-relaxed line-clamp-4">
+                  {project.description}
+                </p>
 
-                  {/* Tech Badges matching screenshot */}
-                  <div className="flex flex-wrap gap-1.5 pt-2">
-                    {project.tech.map((t) => (
-                      <span key={t} className="bg-[#F1F5F9] text-[#334155] text-[11px] font-medium rounded-md px-2.5 py-1">
-                        {t}
-                      </span>
-                    ))}
-                  </div>
+                {/* Tech Badges matching screenshot */}
+                <div className="flex flex-wrap gap-1.5 pt-1">
+                  {project.tech.map((t) => (
+                    <span key={t} className="bg-[#F1F5F9] text-[#334155] text-[11px] font-medium rounded-md px-2.5 py-1">
+                      {t}
+                    </span>
+                  ))}
                 </div>
               </div>
 
               {/* Action Buttons Footer matching screenshot */}
-              <div className="p-6 pt-0 flex items-center gap-3">
-                <a
-                  href={project.githubUrl}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="border border-slate-200 text-[#0F172A] bg-white hover:bg-slate-50 rounded-md px-3.5 py-1.5 text-xs font-medium inline-flex items-center gap-1.5 transition-colors"
-                >
-                  <Github className="h-3.5 w-3.5" />
-                  Code
-                </a>
-
+              <div className="pt-6 flex items-center justify-between gap-3 border-t border-slate-100 mt-5">
                 <button
                   onClick={() => setSelectedProject(project)}
-                  className="bg-[#0B0F17] hover:bg-[#1E293B] text-white rounded-md px-3.5 py-1.5 text-xs font-medium inline-flex items-center gap-1.5 transition-colors"
+                  className="text-xs font-semibold text-slate-500 hover:text-slate-900 transition-colors"
                 >
-                  <ExternalLink className="h-3.5 w-3.5" />
-                  Live Demo
+                  View Details
                 </button>
+
+                <div className="flex items-center gap-2">
+                  <a
+                    href={project.githubUrl}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="border border-slate-200 text-[#0F172A] bg-white hover:bg-slate-50 rounded-md px-3 py-1.5 text-xs font-medium inline-flex items-center gap-1.5 transition-colors"
+                  >
+                    <Github className="h-3.5 w-3.5" />
+                    Code
+                  </a>
+
+                  <a
+                    href={project.liveDemo}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="bg-[#0B0F17] hover:bg-[#1E293B] text-white rounded-md px-3 py-1.5 text-xs font-medium inline-flex items-center gap-1.5 transition-colors"
+                  >
+                    <ExternalLink className="h-3.5 w-3.5" />
+                    Live Demo
+                  </a>
+                </div>
               </div>
             </motion.div>
           ))}
@@ -182,6 +229,27 @@ const ProjectsSection = () => {
                     </span>
                   ))}
                 </div>
+              </div>
+
+              <div className="pt-4 border-t border-slate-100 flex items-center gap-3">
+                <a
+                  href={selectedProject.githubUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="figma-btn-outline text-xs py-2 px-4"
+                >
+                  <Github className="h-4 w-4" />
+                  View GitHub Source
+                </a>
+                <a
+                  href={selectedProject.liveDemo}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="figma-btn-dark text-xs py-2 px-4"
+                >
+                  <ExternalLink className="h-4 w-4" />
+                  Visit Live Demo
+                </a>
               </div>
             </div>
           </motion.div>
