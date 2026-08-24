@@ -10,6 +10,7 @@ const SkillsSection = () => {
       title: "Backend",
       skills: [
         "Node.js",
+        "Python",
         "Express.js",
         "REST APIs",
         "Spring Boot",
@@ -42,10 +43,10 @@ const SkillsSection = () => {
     },
     {
       title: "Frontend",
-      skills: ["React", "Next.js", "Tailwind CSS"],
+      skills: ["React", "Next.js", "Tailwind CSS", "Angular"],
     },
     {
-      title: "Engineering",
+      title: "Tools & Others",
       skills: [
         "Git",
         "Jest",
