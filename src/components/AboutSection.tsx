@@ -54,7 +54,7 @@ const AboutSection = () => {
 
               <div className="space-y-4 text-[#64748B] text-sm sm:text-base leading-relaxed">
                 <p>
-                  I'm a <strong className="text-[#0F172A]">Digital Specialist Engineer L1 at Infosys</strong>, where I develop end-to-end features for large-scale e-commerce platforms serving 12 international markets using <strong>Next.js, React, TypeScript, and Node.js</strong>.
+                  I'm a <strong className="text-[#0F172A]">Digital Specialist Engineer L1 at Infosys</strong>, where I develop end-to-end features for large-scale e-commerce platforms serving international markets using <strong>Next.js, React, TypeScript, and Node.js</strong>.
                 </p>
                 <p>
                   My background includes backend engineering at <strong className="text-[#0F172A]">Parsewave LLC</strong> (building automated LLM training data pipelines in Python & Pandas) and Associate Software Engineer at <strong className="text-[#0F172A]">Blackcoffer</strong>, where I built an end-to-end AI document platform with real-time multi-user editing and Supabase PostgreSQL.

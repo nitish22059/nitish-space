@@ -3,28 +3,30 @@ import { motion } from "framer-motion";
 const SkillsSection = () => {
   const skillCategories = [
     {
-      title: "Frontend",
-      skills: [
-        "React",
-        "TypeScript",
-        "Next.js",
-        "Tailwind CSS",
-        "HTML5",
-        "CSS3",
-        "Redux",
-      ],
+      title: "Languages",
+      skills: ["Java", "JavaScript", "TypeScript", "Python", "Go"],
     },
     {
       title: "Backend",
       skills: [
         "Node.js",
-        "Express",
-        "FastAPI",
         "Python",
+        "Express.js",
+        "REST APIs",
+        "Spring Boot",
+        "WebSockets",
+        "Microservices",
+      ],
+    },
+    {
+      title: "Databases",
+      skills: [
         "PostgreSQL",
-        "Supabase",
         "MongoDB",
         "Redis",
+        "Kafka",
+        "MySQL",
+        "Elasticsearch",
       ],
     },
     {
@@ -32,12 +34,16 @@ const SkillsSection = () => {
       skills: [
         "AWS",
         "Docker",
-        "Kubernetes",
         "CI/CD",
         "GitHub Actions",
         "Vercel",
         "Linux",
+        "Terraform",
       ],
+    },
+    {
+      title: "Frontend",
+      skills: ["React", "Next.js", "Tailwind CSS", "Angular"],
     },
     {
       title: "Tools & Others",
@@ -62,18 +68,18 @@ const SkillsSection = () => {
             Skills & Technologies
           </h2>
           <p className="text-[#64748B] text-base sm:text-lg leading-relaxed">
-            A comprehensive toolkit for building modern web applications
+            A comprehensive technical toolkit for building high-performance software systems
           </p>
         </div>
 
-        {/* 4 Skill Cards Grid matching screenshot */}
-        <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6 max-w-6xl mx-auto">
+        {/* 7 Skill Cards Grid matching exact 7 categories from resume image */}
+        <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl mx-auto">
           {skillCategories.map((cat, index) => (
             <motion.div
               key={cat.title}
               initial={{ opacity: 0, y: 15 }}
               whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.4, delay: index * 0.1 }}
+              transition={{ duration: 0.4, delay: index * 0.05 }}
               viewport={{ once: true }}
               className="bg-white border border-slate-200/80 rounded-2xl p-6 flex flex-col items-center text-center space-y-4 shadow-sm hover:border-slate-300 transition-all"
             >
