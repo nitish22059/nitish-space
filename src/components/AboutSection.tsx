@@ -60,7 +60,7 @@ const AboutSection = () => {
                   My background includes backend engineering at <strong className="text-[#0F172A]">Parsewave LLC</strong> (building automated LLM training data pipelines in Python & Pandas) and Associate Software Engineer at <strong className="text-[#0F172A]">Blackcoffer</strong>, where I built an end-to-end AI document platform with real-time multi-user editing and Supabase PostgreSQL.
                 </p>
                 <p>
-                  I graduated with a <strong>Bachelor of Technology in Computer Science & Engineering</strong> from Chaitanya Bharathi Institute of Technology with an <strong>8.81 / 10 CGPA</strong>, along with open-source contributions to OWASP-BLT and Unsiloed-AI.
+                  I graduated with a <strong className="text-[#0F172A]">Bachelor of Technology in Computer Science & Engineering</strong> from Chaitanya Bharathi Institute of Technology with an <strong className="text-[#0F172A]">8.81 / 10 CGPA</strong>, along with open-source contributions to OWASP-BLT and Unsiloed-AI.
                 </p>
               </div>
             </div>
